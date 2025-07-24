@@ -1,0 +1,17 @@
+{
+  "name": "local-theft-awareness",
+  "version": "1.0.0",
+  "description": "A web application to report and track local theft incidents.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.2"
+  }
+}
