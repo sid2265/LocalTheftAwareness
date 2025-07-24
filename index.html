@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pune Local Theft Awareness</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Firebase JS SDK modules will be imported in app.js as type="module" -->
+</head>
+<body>
+  <header class="hero-header" style="position:relative;">
+    <!-- Google Sign-In button removed -->
+    <div class="hero-overlay">
+      <h1><i class="fa-solid fa-train-subway"></i> Pune Local Train Theft Awareness</h1>
+      <p class="subtitle">Stay alert. Report incidents. Help make Pune's local trains safer for everyone.</p>
+    </div>
+  </header>
+  <main class="main-content">
+    <div class="card-grid">
+      <section id="report-section" class="card animate-fadein">
+        <h2><i class="fa-solid fa-clipboard-list"></i> Report a Theft</h2>
+        <form id="theft-form">
+          <label><i class="fa-solid fa-location-dot"></i> Station:
+            <select id="station" required>
+              <option value="">Select Station</option>
+              <option>Pune Junction</option>
+              <option>Shivajinagar</option>
+              <option>Khadki</option>
+              <option>Dapodi</option>
+              <option>Kasarwadi</option>
+              <option>Pimpri</option>
+              <option>Chinchwad</option>
+              <option>Akurdi</option>
+              <option>Dehu Road</option>
+              <option>Talegaon</option>
+              <option>Begdewadi</option>
+              <option>Ghorawadi</option>
+              <option>Vadgaon</option>
+              <option>Kanhe</option>
+              <option>Kamshet</option>
+              <option>Malavli</option>
+              <option>Lonavala</option>
+            </select>
+          </label>
+          <label><i class="fa-solid fa-calendar-days"></i> Date & Time:
+            <input type="datetime-local" id="datetime" required />
+          </label>
+          <label><i class="fa-solid fa-align-left"></i> Description:
+            <textarea id="description" placeholder="Describe the incident..."></textarea>
+          </label>
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Report</button>
+        </form>
+        <!-- Google Sign-In option removed from form; now only in header -->
+        <div id="form-message"></div>
+      </section>
+      <section id="map-section" class="card animate-fadein">
+        <h2><i class="fa-solid fa-map-location-dot"></i> Theft Hotspots Map</h2>
+        <div id="map" style="height: 400px; border-radius: 10px; overflow: hidden;"></div>
+      </section>
+      <section id="helpline-section" class="card animate-fadein">
+        <h2><i class="fa-solid fa-phone-volume"></i> Helpline Numbers</h2>
+        <ul class="helpline-list">
+          <li><i class="fa-solid fa-shield-halved"></i> Police: <a href="tel:100">100</a></li>
+          <li><i class="fa-solid fa-train"></i> Railway Helpline: <a href="tel:139">139</a></li>
+          <li><i class="fa-solid fa-person-dress"></i> Women Helpline: <a href="tel:1091">1091</a></li>
+          <li><i class="fa-solid fa-child"></i> Children Helpline: <a href="tel:1098">1098</a></li>
+        </ul>
+      </section>
+      <!-- Passenger Instructions Card -->
+      <div class="card animate-fadein instructions-card">
+        <h2><i class="fas fa-user-shield"></i> Passenger Safety: Do's & Don'ts</h2>
+        <div class="instructions-flex">
+          <div class="instructions-column">
+            <h3 class="instructions-title"><i class="fa-solid fa-thumbs-up"></i> Do's</h3>
+            <ul class="instructions-list">
+              <li>Keep your belongings close and always in sight.</li>
+              <li>Report suspicious activity or persons to railway staff immediately.</li>
+              <li>Use secure bags and lock zippers when possible.</li>
+              <li>Stay alert, especially during crowded times and at stations.</li>
+              <li>Save emergency and helpline numbers on your phone.</li>
+            </ul>
+          </div>
+          <div class="instructions-column">
+            <h3 class="instructions-title"><i class="fa-solid fa-ban"></i> Don'ts</h3>
+            <ul class="instructions-list">
+              <li>Leave bags or valuables unattended.</li>
+              <li>Share travel plans or personal information with strangers.</li>
+              <li>Display expensive items (phones, jewelry) openly.</li>
+              <li>Confront thieves directly; seek help from authorities.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>Made with <i class="fa-solid fa-heart" style="color:#e74c3c;"></i> for Hackathons | <a href="https://firebase.google.com/" target="_blank">Firebase</a> | <a href="https://leafletjs.com/" target="_blank">Leaflet.js</a></span>
+    </footer>
+  </main>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
